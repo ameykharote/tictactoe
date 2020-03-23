@@ -10,7 +10,7 @@ export default function Status(props) {
             return status = `Match tied`;
         }
         else {
-            return status = `Next player: ${xIsNext ? "X" : "O"}`;
+            return status = `Player: ${xIsNext ? "X" : "O"} Turn`;
         }
     }
 

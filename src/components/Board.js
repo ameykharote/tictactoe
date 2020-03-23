@@ -32,19 +32,19 @@ export default function Board() {
     }
 
     return (
-        <div>
-            <div className="status"><Status winner={winner} status={status} xIsNext={xIsNext}/></div>
-            <div className="border-row">
+        <div className="container">
+            <h2 className="status"><Status winner={winner} status={status} xIsNext={xIsNext}/></h2>
+            <div>
                 {renderSquare(0)}
                 {renderSquare(1)}
                 {renderSquare(2)}
             </div>
-            <div className="border-row">
+            <div>
                 {renderSquare(3)}
                 {renderSquare(4)}
                 {renderSquare(5)}
             </div>
-            <div className="border-row">
+            <div>
                 {renderSquare(6)}
                 {renderSquare(7)}
                 {renderSquare(8)}
