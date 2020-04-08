@@ -3,24 +3,17 @@ import Square from './Square';
 import Status from './Status';
 
 export default function Board() {
-    
-    const [boardSquares, setBoardSquares] = useState(Array(9).fill(null));
-    
-    const [xIsNext, setXIsNext] = useState(true);
-
-    const winner = calculateWinner(boardSquares);
-
     let status;
+    const [boardSquares, setBoardSquares] = useState(Array(9).fill(null));
+    const [xIsNext, setXIsNext] = useState(true);
+    const winner = calculateWinner(boardSquares);
     
     const handleClick = index => {
+        
         const squares = [...boardSquares];
-
         if (winner || squares[index]) return;
- 
         squares[index] = xIsNext ? "X" : "0";
-
         setBoardSquares(squares);
-
         setXIsNext(!xIsNext);
     
     };
